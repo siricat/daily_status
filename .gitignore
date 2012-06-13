@@ -10,7 +10,8 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 
-# Ruby Version Managers
+# Environment Managers
+.powrc
 .rvmrc
 
 # Ignore all logfiles and tempfiles.
