@@ -1,3 +1,53 @@
-Register Page
+<h3 class="span8">Register</h3>
 
-Set up register form here
+<div class="span8">
+  <form class="form-horizontal well">
+    <fieldset>
+      
+      <div class="control-group">
+        <label class="control-label" for="input01">First Name</label>
+        <div class="controls">
+          <input id="input01" class="input-xlarge" type="text"></input>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <label class="control-label" for="input01">Last Name</label>
+        <div class="controls">
+          <input id="input01" class="input-xlarge" type="text"></input>
+        </div>
+      </div>  
+      
+      <div class="control-group">
+        <label class="control-label" for="input01">Email Address</label>
+        <div class="controls">
+          <input id="input01" class="input-xlarge" type="text"></input>
+        </div>
+      </div>       
+      
+      <div class="control-group">
+        <label class="control-label" for="input01">Password</label>
+        <div class="controls">
+          <input id="input01" class="input-xlarge" type="password"></input>
+        </div>
+      </div>         
+      
+      <div class="control-group">
+        <label class="control-label" for="input02">Confirm Password</label>
+        <div class="controls">
+          <input id="input02" class="input-xlarge" type="password"></input>
+        </div>
+      </div> 
+      
+      <div class="form-actions">  
+        <label class="checkbox">
+          <input id="optionsCheckbox" type="checkbox" value="option1">
+            I agree with the Terms of Service
+        </label>        
+        <%= link_to "Register", root_path, :class => "btn btn-primary" %>          
+      </div>     
+      
+    </fieldset>
+  </form>
+</div> 
+
