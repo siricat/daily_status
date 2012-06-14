@@ -1,16 +1,41 @@
-<h1>Hello People!</h1>
 
-<div class="btn-group">
-  <button class="btn">Status</button>
-  <button class="btn dropdown-toggle" data-toggle="dropdown">
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="">Working</a></li>
-    <li class="divider"></li>
-    <li><a href="">Slamming head on keyboard</a></li>
-    <li class="divider"></li>    
-    <li><a href="">Out of the Office</a></li>  
-  </ul>
+<div class="row">
+  
+  <div class="span8">
+    <form class="well">
+      <h3>Daily Status Report</h3>
+      <div class="controls">
+        <select class="span5" id="select01">
+          <option>What's your Status?</option>
+          <option>In Progress</option>
+          <option>Complete</option>
+          <option>Blocked</option>
+          <option>Waiting/Need Info</option>
+          <option>Out of the Office</option>          
+          <option>Add New</option>          
+        </select>
+      </div>
+      
+      <label>What are you working on?</label>
+      <div class="controls">
+        <textarea id="textarea" class="input-xlarge span5" rows="5" placeholder="Status Report…"></textarea>
+      </div>
+      
+      <%= link_to "Submit", prototypes_path("show"), :class => "btn" %>
+    </form>
+  </div>
+  
+  <div class="span3 offset1">
+    <form class="well">
+      <h3>People on this Project</h3>
+      <ul class="unstyled">
+        <li><i class="icon-user"></i> Ned Needlehoser</li>
+        <li><i class="icon-user"></i> Moaning Mary</li>
+        <li><i class="icon-user"></i> Severus Snape</li>
+        <li><i class="icon-user"></i> Crazy Carrie</li>
+        <li><i class="icon-user"></i> Loathing Larry</li>
+      </ul>
+      <button type="submit" class="btn btn-primary">Watch this Project</button>
+    </form>
+  </div>
 </div>
-
