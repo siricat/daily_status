@@ -3,7 +3,7 @@
 <div class="span8">
   <form class="well">
     <h3>Submitted By</h3>
-    <p>Neil Heinrich</p>
+    <p><%= link_to "Neil Heinrich", void_path %></p>
 
     <h3>Status Report</h3>
     <p>Complete</p>
@@ -32,3 +32,5 @@
     
   </form>
 </div>
+
+<%= render :partial => "watchers" %>
