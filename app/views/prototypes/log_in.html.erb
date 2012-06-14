@@ -1,3 +1,37 @@
-Log In Page
+<h3 class="span8">Log In</h3>
 
-Set up log in form 
+<div class="span8">
+  <form class="form-horizontal well">
+    <fieldset>
+      
+      <div class="control-group">
+        <label class="control-label" for="input01">Username</label>
+        <div class="controls">
+          <input id="input01" class="input-xlarge" type="text"></input>
+        </div>
+      </div>
+      
+      <div class="control-group">
+        <label class="control-label" for="input02">Password</label>
+        <div class="controls">
+          <input id="input02" class="input-xlarge" type="password"></input>
+        </div>
+      </div> 
+      
+      <div class="form-actions">  
+        <%= link_to "Log In", root_path, :class => "btn btn-primary" %>          
+        <label class="checkbox">
+          <input id="optionsCheckbox" type="checkbox" value="option1">
+            Keep me signed in
+        </label>
+      </div>     
+
+      <div class="controls">
+        <%= link_to "Forgot Password?", void_path %>
+      </div>      
+
+      
+    </fieldset>
+  </form>
+</div> 
+

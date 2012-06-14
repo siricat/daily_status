@@ -10,14 +10,20 @@
           <option>Complete</option>
           <option>Blocked</option>
           <option>Waiting/Need Info</option>
-          <option>Out of the Office</option>          
+          <option>Out of the Office</option>
+          <option>Michael Moen Special - Leave me Alone</option>                    
           <option>Add New</option>          
         </select>
       </div>
       
       <label>What are you working on?</label>
       <div class="controls">
-        <textarea id="textarea" class="input-xlarge span5" rows="5" placeholder="Status Report…"></textarea>
+        <textarea id="textarea" class="input-xlarge span5" rows="5" placeholder="Status Detail…"></textarea>
+      </div>
+      
+      <label>Upload a File</label>
+      <div class="controls">
+        <input id="fileInput" class="input-file" type="file"></input>
       </div>
       
       <%= link_to "Submit", prototypes_path("show"), :class => "btn" %>
