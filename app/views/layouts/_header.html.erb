@@ -1,7 +1,12 @@
 
-<header class="row">
-  <h1><%= link_to "Daily Status", prototypes_path, :class => "span5" %></h1>
-    
+<header class="row-fluid page-header">
+  <h1 class="span5"><%= link_to "Daily Status", prototypes_path %></h1>
+  
+  <form class="form-search span4">
+    <input class="input-medium search-query" type="text">
+    <button class="btn" type="submit">Search</button>
+  </form>
+  
   <nav class="pull-right span3">
     <ul>
       <li><%= link_to "Log In", prototypes_path("log_in") %></li>

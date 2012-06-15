@@ -1,42 +1,50 @@
-<div class="alert alert-success span12">
-  <a class="close" data-dismiss="alert" href="#">×</a>
-  <h4 class="alert-heading">Success!</h4>
-    You have successfully reported your daily status. 
+<div class="row-fluid">
+  <div class="alert alert-success span12">
+    <a class="close" data-dismiss="alert" href="#">×</a>
+    <h4 class="alert-heading">Success!</h4>
+      You have successfully reported your daily status. 
+  </div>  
 </div>
 
-<h2 class="span8">June 14, 2012</h2>
 
-<div class="span8">
-  <form class="well">
-    <h3>Submitted By</h3>
-    <p><%= link_to "Neil Heinrich", void_path %></p>
 
-    <h3>Status Report</h3>
-    <p>Complete</p>
-
-    <h3>Status Detail</h3>
-    <p>I have completed the designs for Trackinator in Photoshop. I am moving
-      on to implementing the designs into the application on certain pages that
-      have been set up by Michael Moen. Once the designs are implemented, I will
-      move on to setting up individual pages. See wireframe attached.
-    </p>
-
-    <h3>Attached File</h3>
-    <p><%= link_to "trackinator_design_03.psd", void_path  %></p>
-
-    <h3>Submitted On</h3>
-    <p>June 14, 2012 1:29pm</p>
-    
-    <h3>Leave a Comment</h3>
-    <div class="controls">
-      <textarea id="textarea" class="input-xlarge span5" rows="5" 
-      placeholder="Leave a Comment…">
-      </textarea>
-    </div>
-    
-    <%= link_to "Submit Comment", void_path, :class => "btn btn-primary" %>
-    
-  </form>
+<div class="row-fluid">
+  <h2>June 14, 2012</h2>
 </div>
 
-<%= render :partial => "watchers" %>
+<div class="row-fluid">
+  <div class="span8">
+    <form class="well">
+      <h3>Submitted By</h3>
+      <p><%= link_to "Neil Heinrich", void_path %></p>
+
+      <h3>Status Report</h3>
+      <p>Complete</p>
+
+      <h3>Status Detail</h3>
+      <p>I have completed the designs for Trackinator in Photoshop. I am moving
+        on to implementing the designs into the application on certain pages that
+        have been set up by Michael Moen. Once the designs are implemented, I will
+        move on to setting up individual pages. See wireframe attached.
+      </p>
+
+      <h3>Attached File</h3>
+      <p><%= link_to "trackinator_design_03.psd", void_path  %></p>
+
+      <h3>Submitted On</h3>
+      <p>June 14, 2012 1:29pm</p>
+
+      <h3>Leave a Comment</h3>
+      <div class="controls">
+        <textarea id="textarea" class="input-xlarge span12" rows="5" 
+        placeholder="Leave a Comment…">
+        </textarea>
+      </div>
+
+      <%= link_to "Submit Comment", void_path, :class => "btn btn-primary" %>
+
+    </form>
+  </div>
+
+  <%= render :partial => "watchers" %>  
+</div>
