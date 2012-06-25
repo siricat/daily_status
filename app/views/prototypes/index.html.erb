@@ -1,32 +1,45 @@
 <h2><%= link_to "Dashboard", prototypes_path("index") %></h2>
-
 </br>
+        
+<h3>Projects</h3>
+
+<div class="row-fluid">
+  <div class=span8>
+
+    <form class="well">
+      <h3><%= link_to "Trackinator", prototypes_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>
+      <h3><%= link_to "Gertrude", prototypes_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>
+      <h3><%= link_to "Sparrow", prototypes_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>
+      <h3><%= link_to "Meal Plan", prototypes_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>                  
+    </form>
+  </div>
+    <%= render :partial => "watchers" %>  
+</div>
+
 <h3>Recent Activity</h3>
 
 <div class="row-fluid">
   <div class="span8">
     <form class="well">
-			<p><%= link_to "Neil Heinrich", prototypes_path("neil") %> posted a daily status. <span>10 minutes ago</span></p>
-			<p>I am working on the trackinator design. I think I will be finished with it
-				by tomorrow end of day. See the attached psd to see my current status.
-			</p>
-      <p><%= link_to "trackinator_design_02.psd", void_path  %></p>			
+			<p><%= link_to "Neil Heinrich", prototypes_path("neil") %> started following the project <%= link_to "Trackinator", prototypes_path("projects") %>. <span> 33 minutes ago</span></p>
 		</form>
 
     <form class="well">
-			<p><%= link_to "Siri Hedengran", void_path %> posted a daily status. <span>7 minutes ago</span></p>
-			<p>I am finishing up the prototypes. I should be done with those by this afternoon. I will then
-				be jumping into user flows to determine best features for the site and user scenarios.
-			</p>
+			<p><%= link_to "Siri Hedengran", prototypes_path("neil") %> started following the project <%= link_to "Trackinator", prototypes_path("projects") %>. <span> 23 minutes ago</span></p>
 		</form>
-	
+		
     <form class="well">
-			<p><%= link_to "Siri Hedengran", void_path %> commented on <%= link_to "Neil Heinrich's", prototypes_path("neil") %> daily status. <span>3 minutes ago</span>
-			</p>
-			<p>Great Job! I can't wait to see the implementation! </hp6>
-    </form>
+			<p><%= link_to "Neil Heinrich", prototypes_path("neil") %> posted a daily status. <span> 10 minutes ago</span></p>
+		</form>		
   </div>
 
-  <%= render :partial => "watchers" %>  
 </div>
 
