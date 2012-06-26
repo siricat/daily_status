@@ -38,6 +38,11 @@
         <h5>Leave a Comment</h5>
         <div class="controls">
           <textarea id="textarea" class="input-large span12" rows="3"></textarea>
+          
+          <label>Attach a File</label>
+          <div class="controls">
+            <input id="fileInput" class="input-file span8" type="file"></input>
+          </div>          
         </div>
 
       <%= link_to "Submit Comment", void_path, :class => "btn btn-primary" %>
@@ -65,10 +70,16 @@
       <h4>Submitted</h4>
       <p>Yesterday at 11:13am</p>
     
-      <div class="form-actions">
+      <div class="form-actions">        
+        
         <h5>Leave a Comment</h5>
         <div class="controls">
           <textarea id="textarea" class="input-large span12" rows="3"></textarea>
+          
+          <label>Attach a File</label>
+          <div class="controls">
+            <input id="fileInput" class="input-file span8" type="file"></input>
+          </div>          
         </div>
 
       <%= link_to "Submit Comment", void_path, :class => "btn btn-primary" %>

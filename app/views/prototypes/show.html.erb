@@ -10,9 +10,7 @@
 
 <div class="row-fluid">
   <h2>June 14, 2012</h2>
-</div>
 
-<div class="row-fluid">
   <div class="span8">
     <form class="well">
       <h3>Submitted By</h3>
@@ -40,11 +38,14 @@
       	<div class="controls">
         	<textarea id="textarea" class="input-medium span12" rows="3"></textarea>
       	</div>
-
-      <%= link_to "Submit Comment", void_path, :class => "btn btn-primary" %>
+      	<%= link_to "Submit Comment", void_path, :class => "btn btn-primary" %>
+      </div>
 
     </form>
   </div>
 
-  <%= render :partial => "watchers" %>  
+  <div class="span4">
+    <%= render :partial => "watchers" %>  
+  </div>
+  
 </div>
