@@ -29,3 +29,6 @@ group :test, :development do
   gem "factory_girl_rails", '~> 3.3.0'
 end
 
+group :development do
+  gem 'sextant'
+end
