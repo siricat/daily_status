@@ -54,7 +54,9 @@ DailyStatus::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'prototypes#index'
+  resources :projects
+  
+  root :to => 'projects#index'
 
   match "prototypes(/:action)", :controller => "prototypes", :as => "prototypes"
 
