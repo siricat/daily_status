@@ -7,13 +7,27 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+<nav>
+  <% if user_signed_in? %>
+    <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Log In", new_user_session_path %>
+    <%= link_to "Register", new_user_registration_path %>
+  <% end %>  
+</nav>  
 
-  <div class="container-fluid">
-    <%= render :partial => "layouts/header" %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>    
-    <%= yield %>
-  </div>
+<div class="container-fluid">
+  <%= render :partial => "layouts/header" %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>  
+  <%= yield %>  
+</div>
+
+  
+
+  
+
 
 </body>
 </html>
