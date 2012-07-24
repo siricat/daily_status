@@ -1,3 +1,85 @@
 <h1>Project Dashboard Page</h1>
 
+<div class="row-fluid">
+  <div class="span8">
+
+    <form class="well">
+      <h3><%= link_to "Trackinator", prototypes_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>
+      <h3><%= link_to "Gertrude", projects_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>
+      <h3><%= link_to "Sparrow", projects_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>
+      <h3><%= link_to "Meal Plan", projects_path("projects") %>
+        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
+      </h3>                  
+    </form>
+
+    <h3>Recent Activity</h3>
+ 
+    <form class="well">
+  		<p><%= link_to "Neil Heinrich", prototypes_path("neil") %> started 
+  		    following the project <%= link_to "Trackinator", prototypes_path("projects") %>. 
+  		    <span> 33 minutes ago</span>
+  		</p>
+  	</form>
+
+    <form class="well">
+  		<p><%= link_to "Siri Hedengran", prototypes_path("neil") %> started 
+  		  following the project <%= link_to "Trackinator", prototypes_path("projects") %>.
+  		  <span> 23 minutes ago</span>
+  		</p>
+  	</form>
+	
+    <form class="well">
+  		<p><%= link_to "Neil Heinrich", prototypes_path("neil") %> posted a 
+  		  daily status. <span> 10 minutes ago</span>
+  		</p>
+  	</form>		
+  </div>
+ 
+  <div class="span4">
+  	<form class="well">
+    	<h3>Invite Someone to a Project</h3>
+    	</br>
+    	<fieldset>
+
+        <div class="control-group">
+          <label class="control-label" for="input01">Name</label>
+          <div class="controls">
+            <input id="input01" class="input-large" type="text"></input>
+          </div>
+
+          <label class="control-label" for="input01">Email Address</label>
+          <div class="controls">
+            <input id="input01" class="input-large" type="text"></input>
+          </div>    
+
+
+          <label class="control-label" for="select01">Select a Project</label>
+          <div class="controls">
+            <select id="select01">
+              <option>Trackinator</option>
+              <option>Gertrude</option>
+              <option>Sparrow</option>
+              <option>Meal Plan</option>  
+            </select>                                  
+          </div>  
+        </div>
+      
+      </fieldset>
+
+      <%= link_to "Invite", void_path, :class => "btn btn-primary" %>
+    </form>
+    
+    <%= render :partial => "prototypes/watchers" %> 
+    
+  </div> 
+</div>
+
+
+
 

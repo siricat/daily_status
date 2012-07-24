@@ -1,18 +1,21 @@
-
 <header class="row-fluid page-header">
-  <h1 class="span5"><%= link_to "Daily Status", prototypes_path %></h1>
+  <h1 class="span5"><%= link_to "Daily Status", root_path %></h1>
   
   <form class="form-search span4">
-    <input class="input-medium search-query" type="text">
+    <input class="input-large search-query" type="text">
     <button class="btn" type="submit">Search</button>
   </form>
   
   <nav class="pull-right span3">
     <ul>
-      <li><%= link_to "Log In", prototypes_path("log_in") %></li>
-      <li><%= link_to "Register", prototypes_path("register") %></li>
-      <li><%= link_to "TODO", prototypes_path("todo") %></li> 
-     	<li><%= link_to "Report Daily Status", prototypes_path("status"), :class => "btn btn-primary btn-small" %></li>
+      <% if user_signed_in? %>
+        <li><%= link_to "Settings", void_path %></li> 
+        <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>             
+   	    <li><%= link_to "Report Daily Status", prototypes_path("status"), :class => "btn btn-primary btn-small" %></li>      
+      <% else %>
+        <li><%= link_to "Log In", new_user_session_path %></li>
+        <li><%= link_to "Register", new_user_registration_path %></li>
+     	<% end %>
     </ul>
   </nav>
 </header>

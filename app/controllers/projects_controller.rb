@@ -6,7 +6,6 @@ class ProjectsController < ApplicationController
     # flash[:success] = "This is a success message."
     # flash[:info] = "This is an info message."  
     # flash[:notice] = "This is a notice message."            
-    
   end
   
   def show
@@ -27,7 +26,5 @@ class ProjectsController < ApplicationController
   
   def destroy
   end
-  
-  
   
 end
