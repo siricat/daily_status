@@ -1,0 +1,65 @@
+<div class="row-fluid">
+  <h3>Trackinator</h3>
+  
+  <%= link_to void_path, :class => "btn btn-small" do %>
+    <i class="icon-plus"></i>
+    Follow this Project
+  <% end %>  
+  </br>
+</div>
+
+<h3>Recent Activity</h3>
+
+<div class="row-fluid">
+  <div class="span8">  
+    <form class="well"> 
+  		<p><%= link_to "Neil Heinrich", prototypes_path("neil") %> posted a daily status. <span>10 minutes ago</span></p>
+  		<p>I am working on the trackinator design. I think I will be finished with it
+  			by tomorrow end of day. See the attached psd to see my current status.
+  		</p>
+      <p><%= link_to "trackinator_design_02.psd", void_path  %></p>			
+  	</form>
+
+    <form class="well">
+			<p><%= link_to "Siri Hedengran", void_path %> posted a daily status. <span>7 minutes ago</span></p>
+			<p>I am finishing up the prototypes. I should be done with those by this afternoon. I will then
+				be jumping into user flows to determine best features for the site and user scenarios.
+			</p>
+		</form>
+
+    <form class="well">
+			<p><%= link_to "Siri Hedengran", void_path %> commented on <%= link_to "Neil Heinrich's", prototypes_path("neil") %> daily status. <span>3 minutes ago</span>
+			</p>
+			<p>Great Job! I can't wait to see the implementation! </p>
+    </form>
+  </div>
+
+  <div class="span4">
+  	<form class="well">
+    	<h3>Invite Someone to this Project</h3>
+    	</br>
+    	<fieldset>
+
+        <div class="control-group">
+          <label class="control-label" for="input01">Name</label>
+          <div class="controls">
+            <input id="input01" class="input-large" type="text"></input>
+          </div>
+          
+          <label class="control-label" for="input01">Email Address</label>
+          <div class="controls">
+            <input id="input01" class="input-large" type="text"></input>
+          </div>  
+          
+        </div>
+        <%= link_to "Invite", void_path, :class => "btn btn-primary" %>
+      </fieldset>
+      
+    </form>
+  <%= render :partial => "watchers" %>
+  </div>
+  
+</div>
+
+
+
