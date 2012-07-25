@@ -1,5 +1,11 @@
 <div class="row-fluid">
-  <h3>Trackinator</h3>
+<h2><%= @project.name %></h2>
+  
+  <%= link_to "Edit Project", edit_project_path %>
+  <%= link_to "Delete Project", 
+              [@project], 
+              :method => :delete, 
+              :confirm => "Are you sure you want to delete this project?" %>
   
   <%= link_to void_path, :class => "btn btn-small" do %>
     <i class="icon-plus"></i>
@@ -56,7 +62,7 @@
       </fieldset>
       
     </form>
-  <%= render :partial => "watchers" %>
+  <%= render :partial => "prototypes/watchers" %>
   </div>
   
 </div>

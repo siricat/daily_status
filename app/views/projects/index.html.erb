@@ -3,29 +3,28 @@
   </br>
 </div>
 
-<h3>Projects</h3>
-<%= link_to new_project_path, :class => "btn btn-small" do %>
-  <i class="icon-plus"></i>
-  New Project
-<% end %>
 
 <div class="row-fluid">
   <div class="span8">
+    <header class="clearfix">
+      <h3 class="span10">Projects</h3>
+      <%= link_to new_project_path, :class => "btn btn-small span2 pull-right" do %>
+        <i class="icon-plus"></i>
+        New Project
+      <% end %>
+    </header>
+    <br/>
 
-    <form class="well">
-      <h3><%= link_to "Trackinator", prototypes_path("projects") %>
-        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
-      </h3>
-      <h3><%= link_to "Gertrude", projects_path("projects") %>
-        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
-      </h3>
-      <h3><%= link_to "Sparrow", projects_path("projects") %>
-        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
-      </h3>
-      <h3><%= link_to "Meal Plan", projects_path("projects") %>
-        <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>
-      </h3>                  
-    </form>
+    <div class="well">
+      <ul>
+        <% @projects.each do |project| %>  
+          <li>
+            <h3><%= link_to project.name, project %></h3>
+            <%= link_to "Follow this Project", void_path, :class => "btn btn-mini" %>        
+          </li>
+        <% end %>
+      </ul>
+    </div>
 
     <h3>Recent Activity</h3>
  
