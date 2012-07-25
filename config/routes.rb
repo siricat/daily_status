@@ -1,9 +1,14 @@
 DailyStatus::Application.routes.draw do
+  
   devise_for :users, :path => '/', :path_names => {
     :sign_in => 'login',
     :sign_out => 'logout',
     :sign_up => 'register'
   }
+
+  authenticated :user do
+    root :to => 'projects#index'
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -56,7 +61,7 @@ DailyStatus::Application.routes.draw do
   # just remember to delete public/index.html.
   resources :projects
   
-  root :to => 'projects#index'
+  root :to => 'pages#home'
 
   match "prototypes(/:action)", :controller => "prototypes", :as => "prototypes"
 
