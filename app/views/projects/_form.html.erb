@@ -1,5 +1,15 @@
-<%= simple_form_for @project do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
+<div class="row-fluid">
+  <div class="well span6">
+    <%= simple_form_for @project do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit %>        
+      <%= link_to "Cancel", :back %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
   
