@@ -1,11 +1,11 @@
 class PostsController < ApplicationController
   
   def index
-    @post = Posts.all
+    @posts = Post.all
   end
   
   def show
-    @post = find(params[:id])
+    @post = Post.find(params[:id])
   end  
   
   def new
@@ -28,8 +28,8 @@ class PostsController < ApplicationController
   end
   
   def update
-    @post = Post.find(params[:post])
-    if @post.update_attributes(params[:project])
+    @post = Post.find(params[:id])
+    if @post.update_attributes(params[:post])
       flash[:notice] = "Daily Post has been updated."
       redirect_to @post
     else
@@ -42,7 +42,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     flash[:notice] = "Daily Post has been deleted."
-    redirect_to projects_path
+    redirect_to posts_path
   end
   
   

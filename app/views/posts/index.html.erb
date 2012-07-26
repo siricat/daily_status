@@ -1,1 +1,12 @@
-<h3>Will this page exist? </h3>
+<h3>All Posts</h3>
+
+<div class="well">
+  <ul>
+    <% @posts.each do |post| %>  
+      <li>
+        <h3><%= link_to post.status, post %></h3>
+      </li>
+    <% end %>
+  </ul>
+</div>
+

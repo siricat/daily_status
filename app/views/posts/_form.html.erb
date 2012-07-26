@@ -1,1 +1,10 @@
-Place post form here
+<div class="row-fluid">
+  <div class="well span6">
+    <%= simple_form_for @post do |f| %>
+      <%= f.input :status, :collection => Post::STATUS, :prompt => "Select your Status" %>
+      <%= f.input :status_detail, :as => :text, :placeholder => "Please explain." %>
+      <%= f.button :submit %>        
+      <%= link_to "Cancel", :back %>
+    <% end %>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 <div class="row-fluid">
   <div class="well span6">
     <%= simple_form_for @project do |f| %>
-      <%= f.input :name %>
+      <%= f.input :name, :placeholder => "Project Name" %>
       <%= f.button :submit %>        
       <%= link_to "Cancel", :back %>
     <% end %>
