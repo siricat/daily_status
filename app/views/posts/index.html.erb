@@ -1,11 +1,12 @@
 <h3>All Posts</h3>
 
 <div class="well">
-  <ul>
-    <% @posts.each do |post| %>  
+  <ul class="posts">
+    <% @posts.each do |post| %>
       <li>
         <h3><%= link_to post.status, post %></h3>
-      </li>
+        <span>Created at <%= DateTime %></span>
+      </li>      
     <% end %>
   </ul>
 </div>
