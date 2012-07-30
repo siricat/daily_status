@@ -7,12 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= body_class_name %>">
-  
-<div class="container-fluid">
-  <%= render "layouts/header" %>
-  <%= render "layouts/messages" %>
-  <%= yield %>  
-</div>
+
+  <div class="wrapper">  
+    <div class="container-fluid">
+      <%= render "layouts/header" %>
+      <%= render "layouts/messages" %>
+      <%= yield %>  
+    </div>
+    <div class="push"></div>
+  </div>
+
+
+  <div class="footer">
+    <ul>
+      <li>Daily Status</li>
+      <li><%= link_to "About Us", void_path %></li>
+      <li><%= link_to "Contact", void_path %></li>      
+      <li><%= link_to "FAQ", void_path %></li>      
+      <li><%= link_to "Terms of Service", void_path %></li>      
+    </ul>
+  </div>
 
 </body>
 </html>
