@@ -1,0 +1,14 @@
+<div class="row-fluid">
+  <div class="well span6">
+    <%= simple_form_for @organization do |f| %>
+      <%= f.input :name, :placeholder => "Organization Name" %>
+      <%= f.button :submit %>        
+      <%= link_to "Cancel", :back %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+

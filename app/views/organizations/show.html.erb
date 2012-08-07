@@ -1,0 +1,15 @@
+<div class="row-fluid">
+<h2><%= @organization.name %></h2>
+  
+  <%= link_to "Edit Organization", edit_organization_path %>
+  <%= link_to "Delete Organization", 
+              [@organization], 
+              :method => :delete, 
+              :confirm => "Are you sure you want to delete this organization?" %>
+  
+  <%= link_to void_path, :class => "btn btn-small" do %>
+    <i class="icon-plus"></i>
+    Follow this Organization
+  <% end %>  
+  </br>
+</div>

@@ -14,3 +14,20 @@
         New Organization
       <% end %>
     </header>
+    
+    <div class="well">
+      <ul class="organizations">
+        <% @organizations.each do |organization| %>  
+          <li>
+            <h3><%= link_to organization.name, organization %></h3>
+          </li>
+          <li>
+            <%= link_to "Follow this Organization", void_path, 
+              :class => "btn btn-mini" %>            
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    
+  </div>
+</div>
