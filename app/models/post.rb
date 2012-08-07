@@ -1,5 +1,7 @@
 class Post < ActiveRecord::Base
-  attr_accessible :status, :status_detail
+  
+  attr_accessible :status, 
+    :status_detail
   
   belongs_to :user
   belongs_to :project

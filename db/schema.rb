@@ -11,12 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120724185624) do
+ActiveRecord::Schema.define(:version => 20120807193235) do
 
   create_table "comments", :force => true do |t|
     t.text     "text"
     t.integer  "post_id"
     t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -39,8 +45,9 @@ ActiveRecord::Schema.define(:version => 20120724185624) do
 
   create_table "projects", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "organization_id"
   end
 
   create_table "users", :force => true do |t|
