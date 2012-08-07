@@ -10,6 +10,8 @@ DailyStatus::Application.routes.draw do
     root :to => 'projects#index'
   end
   
+  resources :organizations
+  
   resources :projects
   
   resources :posts

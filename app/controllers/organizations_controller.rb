@@ -15,10 +15,10 @@ class OrganizationsController < ApplicationController
   def create
     @organization = Organization.new(params[:organization])
     if @organization.save
-      flash[:notice] => "#{@organization.name} was sucessfully created."
+      flash[:notice] = "#{@organization.name} was sucessfully created."
       redirect_to @organization
     else
-      flash[:notice] => "Organization was not created."
+      flash[:notice] = "Organization was not created."
       render :action => 'new'
     end
   end
@@ -30,10 +30,10 @@ class OrganizationsController < ApplicationController
   def update
     @organization = Organization.find(params[:id])
     if @organization.update_attributes(params[:organization])
-      flash[:notice] => "#{@organization.name} was successfully updated."
+      flash[:notice] = "#{@organization.name} was successfully updated."
       redirect_to @organization
     else
-      flash[:notice] => "Organization was not updated."
+      flash[:notice] = "Organization was not updated."
       render :action => "edit"
     end
   end
@@ -41,7 +41,7 @@ class OrganizationsController < ApplicationController
   def destroy
     @organization = Organization.find(params[:id])
     @organization.destroy
-    flash[:notice] => "#{@organization.name} was deleted."
+    flash[:notice] = "#{@organization.name} was deleted."
     redirect_to organizations_path
   end
   

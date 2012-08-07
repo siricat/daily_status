@@ -1,0 +1,16 @@
+<div class="row-fluid">
+  <h2><%= link_to "Organization Dashboard", organizations_path %></h2>
+</div>
+<br/>
+
+<%= link_to "Project Dashboard", projects_path %>
+
+<div class="row-fluid">
+  <div class="span8">
+    <header class="clearfix">
+      <h3 class="span9">Organizations</h3>
+      <%= link_to new_organization_path, :class => "btn btn-small span3 pull-right" do %>
+        <i class="icon-plus"></i>
+        New Organization
+      <% end %>
+    </header>
