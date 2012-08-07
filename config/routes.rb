@@ -15,6 +15,11 @@ DailyStatus::Application.routes.draw do
   resources :posts
   
   root :to => 'pages#home'
+  
+  match '/about' => 'pages#about', :as => :about
+  match '/contact' => 'pages#contact', :as => :contact
+  match '/help' => 'pages#help', :as => :help
+  match '/terms' => 'pages#terms', :as => :terms
 
   match "prototypes(/:action)", :controller => "prototypes", :as => "prototypes"  
 
