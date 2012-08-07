@@ -29,7 +29,7 @@ class OrganizationsController < ApplicationController
   
   def update
     @organization = Organization.find(params[:id])
-    if @organization.update_attributes(params[:project])
+    if @organization.update_attributes(params[:organization])
       flash[:notice] => "#{@organization.name} was successfully updated."
       redirect_to @organization
     else
