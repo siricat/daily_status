@@ -15,10 +15,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(params[:post])
     if @post.save
-      flash[:notice] = "Daily Post has been created."
+      flash[:notice] = "Daily Post was successfully created."
       redirect_to @post
     else
-      flash[:error] = "Daily Post has not been created."
+      flash[:error] = "Daily Post was not created."
       render :action => "new"
     end
   end
@@ -30,10 +30,10 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
-      flash[:notice] = "Daily Post has been updated."
+      flash[:notice] = "Daily Post was successfully updated."
       redirect_to @post
     else
-      flash[:error] = "Daily Post has not been updated."
+      flash[:error] = "Daily Post was not updated."
       render :action => "edit"
     end    
   end
