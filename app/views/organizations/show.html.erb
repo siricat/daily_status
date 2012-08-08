@@ -1,15 +1,86 @@
 <div class="row-fluid">
 <h2><%= @organization.name %></h2>
-  
-  <%= link_to "Edit Organization", edit_organization_path %>
-  <%= link_to "Delete Organization", 
+<%= link_to void_path, :class => "btn btn-small" do %>
+  <i class="icon-eye-open"></i>
+  Watch this Organization
+<% end %>
+
+<%= link_to void_path, :class => "btn btn-small pull-right" do %>
+  Start a Discussion
+<% end %>
+
+<%= link_to void_path, :class => "btn btn-small pull-right" do %>
+  <i class="icon-comment"></i>
+  Make an Announcement
+<% end %>
+
+  <%= link_to "Edit", edit_organization_path %>
+  <%= link_to "Delete", 
               [@organization], 
               :method => :delete, 
               :confirm => "Are you sure you want to delete this organization?" %>
-  
-  <%= link_to void_path, :class => "btn btn-small" do %>
-    <i class="icon-plus"></i>
-    Follow this Organization
-  <% end %>  
+   
   </br>
+  </br>
+  
+  <div class="row-fluid">
+    <div class="span8">
+      <header class="clearfix">
+        <h3 class="span10"><%= "#{@organization.name}'s Projects" %></h3>
+        <%= link_to new_project_path, :class => "btn btn-small pull-right" do %>
+          <i class="icon-plus"></i>
+          Add a Project
+        <% end %>
+      </header>
+
+      <div class="well">
+        <ul class="projects">
+
+        </ul>
+      </div> 
+      
+      <header>
+        <h3>Recent Activity</h3>
+      </header>
+
+      <div class="well">
+        <ul class="projects">
+
+        </ul>
+      </div>     
+    </div>
+    
+    <header class="span4 clearfix">
+      <h3>Invite Someone to this Organization</h3>
+    </header>
+    
+    <div class="span4">
+    	<form class="well">
+      	<fieldset>
+
+          <div class="control-group">
+            <label class="control-label" for="input01">Name</label>
+            <div class="controls">
+              <input id="input01" class="input-large" type="text"></input>
+            </div>
+
+            <label class="control-label" for="input01">Email Address</label>
+            <div class="controls">
+              <input id="input01" class="input-large" type="text"></input>
+            </div>    
+
+          </div>
+
+        </fieldset>
+
+        <%= link_to "Invite", void_path, :class => "btn btn-primary" %>
+      </form>
+
+      <%= render :partial => "prototypes/watchers" %> 
+
+    </div>
+
+  </div>
+
+  
 </div>
