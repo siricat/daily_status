@@ -1,23 +1,33 @@
-<header class="row-fluid page-header">
-  <h1 class="span5"><%= link_to "Daily Status", root_path %></h1>
-  
-  <% if user_signed_in?  %>
-    <form class="form-search span4">
-      <input class="input-large search-query" type="text">
-      <button class="btn" type="submit">Search</button>
-    </form>
-  <% end %>
-  
-  <nav class="pull-right span3">
-    <ul>
-      <% if user_signed_in? %>
-        <li><%= link_to "Settings", void_path %></li> 
-        <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>             
-   	    <li><%= link_to "Report Daily Status", new_post_path, :class => "btn btn-primary btn-small" %></li>      
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      
+      <%= link_to "Daily Status", root_path, :class => "brand" %>
+         
+      <% if user_signed_in? %>         
+   	    <%= link_to "Report Daily Status", new_post_path, :class => "btn btn-primary btn-small pull-left" %>                
+        <form class="navbar-search">
+          <input class="span14 search-query" type="text" placeholder="Search">
+        </form>
+        <ul class="nav pull-right">
+          <li><%= link_to "Dashboard", dashboard_path %></li>
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Settings", void_path %></li> 
+          <li class="divider-vertical"></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, :method => :delete %></li>             
+          <li class="divider-vertical"></li>             
+   	    </ul> 
+ 	    
       <% else %>
-        <li><%= link_to "Log In", new_user_session_path %></li>
-        <li><%= link_to "Register", new_user_registration_path %></li>
-     	<% end %>
-    </ul>
-  </nav>
-</header>
+        <ul class="nav pull-right">
+          <li><%= link_to "Log In", new_user_session_path %></li>      
+          <li class="divider-vertical"></li>        
+          <li><%= link_to "Register", new_user_registration_path %></li>
+        </ul>
+      <% end %>        
+
+    </div>
+  </div>
+</div>
+
+

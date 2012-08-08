@@ -1,15 +1,13 @@
 <div class="row-fluid">
-  <h2><%= link_to "#{current_user.email}'s Dashboard", void_path %></h2>
+  <h2><%= "#{current_user.email}'s Dashboard" %></h2>
 </div>
 <br/>
-
-<%= link_to "Organization Dashboard", organizations_path %>
-<%= link_to "Project Dashboard", projects_path %>
 
 <div class="row-fluid">
   <div class="span8">
     <header class="clearfix">
       <h3 class="span10">My Organizations</h3>
+   	  <%= link_to "Report Daily Status", new_post_path, :class => "btn btn-primary btn-small" %>
     </header>
 
     <div class="well">
