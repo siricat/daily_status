@@ -7,7 +7,7 @@ DailyStatus::Application.routes.draw do
   }
 
   authenticated :user do
-    root :to => 'projects#index'
+    root :to => 'users#dashboard'
   end
   
   resources :organizations
@@ -17,6 +17,8 @@ DailyStatus::Application.routes.draw do
   resources :posts
   
   root :to => 'pages#home'
+  
+  match '/dashboard' => 'users#dashboard', :as => :dashboard
   
   match '/about' => 'pages#about', :as => :about
   match '/contact' => 'pages#contact', :as => :contact

@@ -1,0 +1,68 @@
+<div class="row-fluid">
+  <h2><%= link_to "#{current_user.email}'s Dashboard", void_path %></h2>
+</div>
+<br/>
+
+<%= link_to "Organization Dashboard", organizations_path %>
+<%= link_to "Project Dashboard", projects_path %>
+
+<div class="row-fluid">
+  <div class="span8">
+    <header class="clearfix">
+      <h3 class="span10">My Organizations</h3>
+    </header>
+
+    <div class="well">
+      <ul class="organizations">
+        <% @organizations.each do |organization| %>  
+          <li>
+            <h3><%= link_to organization.name, organization %></h3>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    
+    <header class="clearfix">
+      <h3 class="span10">My Projects</h3>
+    </header>
+    
+    <div class="well">
+      <ul class="projects">
+        <% @projects.each do |project| %>  
+          <li>
+            <h3><%= link_to project.name, project %></h3>
+          </li>
+        <% end %>
+      </ul>
+    </div> 
+    
+    <header class="clearfix">
+      <h3 class="span10">My Posts</h3>
+    </header>
+    
+    <div class="well">
+      <ul class="projects">
+        <% @posts.each do |post| %>  
+          <li>
+            <h3><%= link_to post.status, post %></h3>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>     
+    
+  <header class="span4 clearfix">
+    <h3>Recent Activity</h3>
+  </header>
+  
+  <div class="span4 well">  
+    <ul class="unstyled">
+      <li>First Activity</li>
+      <li>Second Activity</li>
+      <li>Third Activity</li>        
+    </ul>
+  </div> 
+    
+</div>
+    
+     
